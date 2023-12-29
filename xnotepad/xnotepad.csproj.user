@@ -4,6 +4,19 @@
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net8.0-windows10.0.19041.0</ActiveDebugFramework>
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
+    <UapAppxPackageBuildMode>SideloadOnly</UapAppxPackageBuildMode>
+    <AppxShowAllApps>False</AppxShowAllApps>
+    <_LastSelectedProfileId>MSIX-win10-x86.pubxml</_LastSelectedProfileId>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <Source>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</Source>
+    <SmallTileSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</SmallTileSource>
+    <MediumTileSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</MediumTileSource>
+    <WideTileSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</WideTileSource>
+    <LargeTileSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</LargeTileSource>
+    <AppIconSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</AppIconSource>
+    <SplashScreenSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</SplashScreenSource>
+    <PackageLogoSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</PackageLogoSource>
+    <BadgeLogoSource>E:\github\xnotepad\xnotepad\Resources\Images\appicon400x400.png</BadgeLogoSource>
   </PropertyGroup>
   <ItemGroup>
     <MauiXaml Update="Views\AboutPage.xaml">

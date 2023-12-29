@@ -6,14 +6,14 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="maui-package-name-placeholder" Publisher="CN=User Name" Version="0.0.0.0" />
+  <Identity Name="maui-package-name-placeholder" Publisher="CN=yanghao" Version="0.0.5.0" />
 
   <mp:PhoneIdentity PhoneProductId="B6B45F11-1201-499B-B188-6A9AFCE92113" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>$placeholder$</DisplayName>
     <PublisherDisplayName>User Name</PublisherDisplayName>
-    <Logo>$placeholder$.png</Logo>
+    <Logo>Resources\Images\icons\$placeholder$.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -30,11 +30,13 @@
       <uap:VisualElements
         DisplayName="$placeholder$"
         Description="$placeholder$"
-        Square150x150Logo="$placeholder$.png"
-        Square44x44Logo="$placeholder$.png"
+        Square150x150Logo="Resources\Images\icons\$placeholder$.png"
+        Square44x44Logo="Resources\Images\icons\$placeholder$.png"
         BackgroundColor="transparent">
-        <uap:DefaultTile Square71x71Logo="$placeholder$.png" Wide310x150Logo="$placeholder$.png" Square310x310Logo="$placeholder$.png" />
-        <uap:SplashScreen Image="$placeholder$.png" />
+        <uap:DefaultTile Square71x71Logo="Resources\Images\icons\$placeholder$.png" Wide310x150Logo="Resources\Images\icons\$placeholder$.png" Square310x310Logo="Resources\Images\icons\$placeholder$.png" >
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Resources\Images\icons\$placeholder$.png" />
+        <uap:LockScreen BadgeLogo="Resources\Images\icons\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>

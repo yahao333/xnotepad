@@ -36,6 +36,16 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+		<GenerateAppInstallerFile>True</GenerateAppInstallerFile>
+		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+		<PackageCertificateThumbprint>5B709CF5D2C2022C9826C12FBAD9343D21CE1BE2</PackageCertificateThumbprint>
+		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+		<GenerateTestArtifacts>True</GenerateTestArtifacts>
+		<AppInstallerUri>Z:\home\xnotepad\public</AppInstallerUri>
+		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+		<DefaultLanguage>en</DefaultLanguage>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -54,6 +64,37 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\$placeholder$.altform-lightunplated_targetsize-16.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-lightunplated_targetsize-24.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-lightunplated_targetsize-256.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-lightunplated_targetsize-32.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-lightunplated_targetsize-48.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-unplated_targetsize-16.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-unplated_targetsize-24.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-unplated_targetsize-256.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-unplated_targetsize-32.png" />
+	  <None Remove="Resources\Images\$placeholder$.altform-unplated_targetsize-48.png" />
+	  <None Remove="Resources\Images\$placeholder$.targetsize-16.png" />
+	  <None Remove="Resources\Images\$placeholder$.targetsize-24.png" />
+	  <None Remove="Resources\Images\$placeholder$.targetsize-256.png" />
+	  <None Remove="Resources\Images\$placeholder$.targetsize-32.png" />
+	  <None Remove="Resources\Images\$placeholder$.targetsize-48.png" />
+	  <None Remove="Resources\Images\icons\%24placeholder%24.scale-100.png" />
+	  <None Remove="Resources\Images\icons\%24placeholder%24.scale-125.png" />
+	  <None Remove="Resources\Images\icons\%24placeholder%24.scale-150.png" />
+	  <None Remove="Resources\Images\icons\%24placeholder%24.scale-200.png" />
+	  <None Remove="Resources\Images\icons\%24placeholder%24.scale-400.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\Images\icons\$placeholder$.scale-100.png" />
+	  <Content Include="Resources\Images\icons\$placeholder$.scale-125.png" />
+	  <Content Include="Resources\Images\icons\$placeholder$.scale-150.png" />
+	  <Content Include="Resources\Images\icons\$placeholder$.scale-200.png" />
+	  <Content Include="Resources\Images\icons\$placeholder$.scale-400.png" />
 	</ItemGroup>
 
 	<ItemGroup>
