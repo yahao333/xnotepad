@@ -5,3 +5,5 @@
 /xnotepad/.vs/xnotepad
 /xnotepad/bin/Debug/net8.0-windows10.0.19041.0/win10-x64
 /xnotepad/obj
+/xnotepad/bin/Release
+/xnotepad/bin/Release
