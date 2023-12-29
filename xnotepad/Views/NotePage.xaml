@@ -4,8 +4,9 @@
              x:Class="xnotepad.Views.NotePage"
              Title="NotePage">
     <VerticalStackLayout Spacing="10" Margin="5">
-        <Editor x:Name="TextEditor" Text="{Binding Text}" HeightRequest="100"
+        <Editor x:Name="TextEditor" Text="{Binding Text}" HeightRequest="600"
                 Placeholder="Enter your note"/>
+            
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button Text="Save" Clicked="SaveButton_Clicked"/>
             <Button Grid.Column="1" Text="Delete" Clicked="DeleteButton_Clicked"/>

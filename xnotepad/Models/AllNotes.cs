@@ -44,6 +44,7 @@ internal class AllNotes
     private string convertBrief(string text)
     {
         string rt = "空";
+        const int MIN_LENGTH = 28;
 
         if (!string.IsNullOrEmpty(text) && !string.IsNullOrEmpty(text.Trim()))
         {
@@ -52,7 +53,8 @@ internal class AllNotes
             {
                 if (myString?.Trim().Length > 0)
                 {
-                    return myString;
+                    var min = Math.Min(MIN_LENGTH, myString.Trim().Length);
+                    return myString.Trim().Substring(0, min);
                 }
             }
         }
