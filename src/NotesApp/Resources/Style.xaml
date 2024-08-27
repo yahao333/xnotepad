@@ -1,0 +1,79 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- 定义图标 -->
+    <PathGeometry x:Key="StarGeometry">
+        M 10,1 L 12,6.9 L 18,6.9 L 13.5,10.9 L 15.5,16.6 L 10,13.6 L 4.5,16.6 L 6.5,10.9 L 2,6.9 L 8,6.9 Z
+    </PathGeometry>
+    <PathGeometry x:Key="FolderGeometry">
+        M937.1648 1024H86.8352C38.912 1024 0 980.8896 0 928.0512V96.0512C0 43.1104 38.912 0 86.8352 0h288.0512c9.3184 0 18.2272 4.096 24.2688 11.1616L520.192 152.3712c4.1984 4.9152 9.3184 7.5776 14.5408 7.5776h402.432c47.9232 0 86.8352 43.1104 86.8352 96.0512v672.0512c0 52.8384-39.0144 95.9488-86.8352 95.9488zM86.8352 64c-12.3904 0-22.8352 14.6432-22.8352 32.0512v832c0 17.3056 10.4448 32.0512 22.8352 32.0512h850.3296c12.3904 0 22.8352-14.6432 22.8352-32.0512V256c0-17.3056-10.4448-32.0512-22.8352-32.0512h-402.432c-23.8592 0-46.7968-10.9568-63.0784-29.9008L360.1408 64H86.8352z
+        M991.9488 384H32.0512C14.336 384 0 369.664 0 352.0512s14.336-32.0512 32.0512-32.0512h960c17.7152 0 32.0512 14.336 32.0512 32.0512s-14.4384 31.9488-32.1536 31.9488z
+    </PathGeometry>
+    
+    <!-- 定义图标按钮样式 -->
+    <Style x:Key="IconButtonStyle" TargetType="Button">
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Path Data="{Binding}" Fill="Black" Stretch="Uniform" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="IconButtonStyle2" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="0.8"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" Value="0.6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NormalButtonStyle" TargetType="Button" BasedOn="{StaticResource IconButtonStyle2}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+    </Style>
+
+    <!-- Tag样式 -->
+    <Style x:Key="TagListView" TargetType="ListView">
+    </Style>
+
+    <Style x:Key="GridViewColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+        <Setter Property="Template" Value="{x:Null}"/>
+    </Style>
+    
+    <!-- 颜色 -->
+    <SolidColorBrush x:Key="PrimaryColor" Color="White"/>
+    <SolidColorBrush x:Key="SecondaryColor" Color="#CEE3E0"/>
+    <SolidColorBrush x:Key="NeutralColor" Color="#6E7C7C"/>
+    <SolidColorBrush x:Key="TextColor" Color="#6E7C7C"/>
+    <SolidColorBrush x:Key="AccentColor" Color="#332E27"/>
+    
+    <!-- 窗口阴影 -->
+    <Style x:Key="ShaderBoder" TargetType="Border">
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect BlurRadius="15" Direction="315" 
+                              Opacity="0.5" ShadowDepth="8" Color="Black"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="NotesApp.UserControls.TagListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NotesApp.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Path Data="{Binding IconGeometry}" Fill="Black" Width="50" Height="50" Grid.Column="0"/>
+
+        <TextBlock x:Name="TagTextBlock" Text="{Binding Text1}" Grid.Column="1" VerticalAlignment="Center"/>
+
+        <Border Grid.Column="2" VerticalAlignment="Center" MouseLeftButtonDown="EditableText_MouseDoubleClick">
+            <TextBlock x:Name="EditableText" Text="{Binding Text2}" />
+        </Border>
+        <TextBox x:Name="TextBoxEdit" Text="{Binding Text2, UpdateSourceTrigger=PropertyChanged}" Grid.Column="2" VerticalAlignment="Center" Visibility="Collapsed" LostFocus="TextBoxEdit_LostFocus" KeyDown="TextBoxEdit_KeyDown"/>
+    </Grid>
+</UserControl>
