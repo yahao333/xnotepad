@@ -11,4 +11,5 @@ A streamlined note-taking app with rich features for efficient writing, organiza
 
 Whether you're a student, professional, or creative writer, xnotepad provides the perfect platform to write, edit, and store your notes efficiently.
 
-
+## App
+![App](/screenshot.png?raw=true "App")
